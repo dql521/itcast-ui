@@ -32,6 +32,14 @@
       <do-button icon="do-icon-check" circle type="warning"></do-button>
       <do-button icon="do-icon-check" circle type="danger"></do-button>
     </div>
+    <div class="row">
+      <do-button disabled>按钮</do-button>
+      <do-button disabled type="primary">按钮</do-button>
+      <do-button disabled type="success">按钮</do-button>
+      <do-button disabled type="info">按钮</do-button>
+      <do-button disabled type="warning">按钮</do-button>
+      <do-button disabled type="danger">按钮</do-button>
+    </div>
   </div>
 </template>
 
