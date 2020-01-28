@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <div class="row">
+    <!-- <div class="row">
       <do-button>按钮</do-button>
       <do-button type="primary">按钮</do-button>
       <do-button type="success">按钮</do-button>
@@ -39,13 +39,30 @@
       <do-button disabled type="info">按钮</do-button>
       <do-button disabled type="warning">按钮</do-button>
       <do-button disabled type="danger">按钮</do-button>
-    </div>
-  </div>
+    </div> -->
+    <do-button @click="visible=true">按钮</do-button>
+    <do-dialog title="温馨提示" :visible.sync="visible">
+      <input type="text" placeholder="请输入用户名">
+      <template v-slot:footer>
+        <do-button type="primary" @click="visible=false">确定</do-button>
+        <do-button @click="visible=false">取消</do-button>
+      </template>
+    </do-dialog>
+    <!-- <do-dialog>
+      <template v-slot:title>
+        <h1>我是标题</h1>
+      </template>
+    </do-dialog> -->
+</div>
 </template>
 
 <script>
 export default {
-
+  data () {
+    return {
+      visible: false
+    }
+  }
 }
 </script>
 

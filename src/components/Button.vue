@@ -225,67 +225,31 @@ export default {
     background-image: none;
     background-color: #fff;
     border-color: #ebeef5;
-  // &:hover,
-  // &:focus {
-  //   background: #fff;
-  //   border-color: #409eff;
-  //   color: #409eff;
-  // }
 }
 .do-button--primary.is-disabled {
   color: #a2a8ad;
   background: #ecf5ff;
   border-color: #b3d8ff;
-  // &:hover,
-  // &:focus {
-  //   background: #409eff;
-  //   border-color: #409eff;
-  //   color: #fff;
-  // }
 }
 .do-button--success.is-disabled {
   color: #67c23a;
   background: #f0f9eb;
   border-color: #c2e7b0;
-  // &:hover,
-  // &:focus {
-  //   background: #67c23a;
-  //   border-color: #67c23a;
-  //   color: #fff;
-  // }
 }
 
 .do-button--info.is-disabled {
   color: #909399;
   background: #f4f4f5;
   border-color: #d3d4d6;
-  // &:hover,
-  // &:focus {
-  //   background: #909399;
-  //   border-color: #909399;
-  //   color: #fff;
-  // }
 }
 .do-button--warning.is-disabled {
   color: #e6a23c;
   background: #fdf6ec;
   border-color: #f5dab1;
-  // &:hover,
-  // &:focus {
-  //   background: #e6a23c;
-  //   border-color: #e6a23c;
-  //   color: #fff;
-  // }
 }
 .do-button--danger.is-disabled {
   color: #f56c6c;
   background: #fef0f0;
   border-color: #fbc4c4;
-  // &:hover,
-  // &:focus {
-  //   background: #f56c6c;
-  //   border-color: #f56c6c;
-  //   color: #fff;
-  // }
 }
 </style>
