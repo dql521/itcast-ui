@@ -48,8 +48,13 @@
         <do-button @click="visible=false">取消</do-button>
       </template>
     </do-dialog>
-    <do-input type="text" placeholder="请输入内容"></do-input>
-    <do-input type="password" placeholder="请输入密码" showPassword></do-input>
+    <do-input type="text" placeholder="请输入内容" showPassword v-model="name"></do-input>
+    <do-switch v-model="active"></do-switch>
+    <do-switch v-model="active" active-color="greenyellow" inactive-color="#dcdfe6"></do-switch>
+    <do-radio-group v-model="gender">
+      <do-radio label="1">男</do-radio>
+     <do-radio label="0">女</do-radio>
+    </do-radio-group>
 </div>
 </template>
 
@@ -57,7 +62,10 @@
 export default {
   data () {
     return {
-      visible: false
+      visible: false,
+      name: '',
+      active: false,
+      gender: '1'
     }
   }
 }

@@ -1,6 +1,7 @@
 <template>
   <div class="do-input" :class="{'do-input--suffix':showSuffix}">
-    <input class="do-input__inner" :type="showPassword ? (passwordVisible ? 'text' : 'password') : type"
+    <input class="do-input__inner"
+    :type="showPassword ? (passwordVisible ? 'text':'password') : type"
     :placeholder="placeholder"
     :disabled="disabled"
     :name="name"
