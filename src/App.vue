@@ -40,7 +40,7 @@
       <do-button disabled type="warning">按钮</do-button>
       <do-button disabled type="danger">按钮</do-button>
     </div>
-    <do-button @click="visible=true" type="">按钮</do-button>
+    <do-button @click="visible=true" type="">点击显示</do-button>
     <do-dialog title="温馨提示" :visible.sync="visible">
       <input type="text" placeholder="请输入用户名">
       <template v-slot:footer>
@@ -48,13 +48,27 @@
         <do-button @click="visible=false">取消</do-button>
       </template>
     </do-dialog>
-    <do-input type="text" placeholder="请输入内容" showPassword v-model="name"></do-input>
-    <do-switch v-model="active"></do-switch>
-    <do-switch v-model="active" active-color="greenyellow" inactive-color="#dcdfe6"></do-switch>
-    <do-radio-group v-model="gender">
-      <do-radio label="1">男</do-radio>
-     <do-radio label="0">女</do-radio>
-    </do-radio-group>
+   <do-form :model="model" label-width="100px">
+     <do-form-item label="用户名:">
+       <do-input placeholder="请输入用户名" v-model="model.username"></do-input>
+     </do-form-item>
+     <do-form-item label="开通:">
+       <do-switch v-model="model.active"></do-switch>
+     </do-form-item>
+     <do-form-item label="性别:">
+       <do-radio-group v-model="model.gender">
+         <do-radio label="男"></do-radio>
+       <do-radio label="女"></do-radio>
+       </do-radio-group>
+     </do-form-item>
+     <do-form-item label="爱好:">
+       <do-checkbox-group v-model="model.hobby">
+         <do-checkbox label="打篮球"></do-checkbox>
+       <do-checkbox label="打游戏"></do-checkbox>
+       <do-checkbox label="敲代码"></do-checkbox>
+       </do-checkbox-group>
+     </do-form-item>
+   </do-form>
 </div>
 </template>
 
@@ -64,8 +78,12 @@ export default {
     return {
       visible: false,
       name: '',
-      active: false,
-      gender: '1'
+      model: {
+        username: '',
+        active: false,
+        gender: '1',
+        hobby: []
+      }
     }
   }
 }
